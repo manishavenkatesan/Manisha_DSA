@@ -1,0 +1,19 @@
+class Solution {
+    public int cornerDigitSum(int n) {
+        int lds = n % 10;
+        int fd;
+
+        while (n > 0) {
+            int ld = n % 10;
+            n = n / 10;
+
+            if (n == 0) {
+                fd = ld;
+                return fd + lds;
+            }
+        }
+        return 0;
+
+    }
+}
+//Given a positive integer n, find the sum of the first and the last digit of n
