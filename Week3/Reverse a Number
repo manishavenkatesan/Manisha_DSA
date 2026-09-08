@@ -1,0 +1,16 @@
+Write a program that gets n as input and print the reverse of the number
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        while(n>0){
+            int ld=n%10;
+            sum=sum*10+ld;
+            n=n/10;
+        }
+        System.out.println(sum);
+        
+    }
+}
