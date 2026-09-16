@@ -1,0 +1,16 @@
+class Solution {
+    public int[] countOddEven(int[] arr) {
+        // Code here
+        int evenC=0;
+        int oddC=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                evenC++;
+            }
+            else{
+                oddC++; 
+            }
+        }
+        return new int[]{oddC,evenC};
+    }
+}
