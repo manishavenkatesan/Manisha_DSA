@@ -1,0 +1,20 @@
+class Solution {
+    int isTriangular(int n) {
+        // code here
+    
+                int sum = 0;
+               
+                for(int i=1;i<=n;i++){
+                    sum=sum+i;
+                
+                if(sum==n){
+                    return 1;
+                }
+                else if(sum>n){
+                    return 0;
+                }
+                
+            }
+            return 0;
+    }   
+}
