@@ -1,0 +1,11 @@
+class Solution {
+    public int sumOfFifthPowers(int n) {
+        // Code here
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=i*i*i*i*i;
+        }
+        
+        return sum;
+    }
+}
