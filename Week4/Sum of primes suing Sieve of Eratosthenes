@@ -1,0 +1,29 @@
+class Solution {
+    public int sumOfPrimes(int L, int R) {
+
+        int[] a = new int[R + 1];
+
+        // Sieve of Eratosthenes
+        for (int i = 2; i <= Math.sqrt(R); i++) {
+
+            if (a[i] == 0) {
+
+                for (int j = i * 2; j <= R; j = j + i) {
+                    a[j] = 1;
+                }
+            }
+        }
+
+        // Find sum of primes from L to R
+        int sum = 0;
+
+        for (int i = L; i <= R; i++) {
+
+            if (a[i] == 0 && i >= 2) {
+                sum = sum + i;
+            }
+        }
+
+        return sum;
+    }
+}
